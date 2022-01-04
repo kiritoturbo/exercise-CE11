@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tt {
+            height: 20px;
+            width: 200px;
+            background-color: rgb(19, 31, 139);
+            animation: chaychu 10s;
+        }
+
+        @keyframes chaychu {
+            from {
+                right: 0%;
+            }
+
+            to {
+                left: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Thực hành 11. Ứng dụng hàm setTimeout để hiển thị hộp thoại thông báo thành công -->
+    <div id="col"></div>
+    <script>
+        setTimeout(() => {
+            var color1 = document.getElementById('col');
+            color1.classList.toggle('tt');
+            color1.innerHTML = 'đăng ký thành công ';
+            color1.style.color = 'white';
+            color1.style.float = "right";
+        }, 3000);
+    </script>
+</body>
+
+</html>
