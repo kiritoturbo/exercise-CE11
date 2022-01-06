@@ -8,7 +8,7 @@
     <title>Document</title>
     <style>
         #process {
-            width: 100%;
+            width: 600px;
             border: 1px solid violet;
             height: 50px;
         }
@@ -17,7 +17,7 @@
             height: 50px;
             width: 0px;
             background-color: yellow;
-            background-color: ;
+            /* background-color: ; */
         }
     </style>
 </head>
@@ -26,17 +26,24 @@
     <div id="process">
         <div id="bar"></div>
     </div>
+    <div id="percent">0%</div>
     <button onclick="run();">run</button>
     <script>
         var b = document.getElementById('bar');
+        var p = document.getElementById('percent');
+
         var count = 0;
 
         function run() {
-            setInterval(() => {
-                // count = count + 5;
-                b.style.width = "%";
-                count = count + t;
-            }, 1000);
+            const timem = setInterval(() => {
+                count = count + 5;
+                b.style.width = count + "%";
+                percent.innerText = count + '%';
+                // count = count + t;
+                if (count === 100) {
+                    clearTimeout(timem);
+                }
+            }, 100);
         }
     </script>
 </body>
