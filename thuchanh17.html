@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="show"></div>
+    <a href="http://dantri.com.vn">Dân trí</a>
+    <a href="http://google.com.vn">Google</a>
+    <a href="http://cegroup.top">CEGroup</a>
+    <script>
+        var lstA = document.querySelectorAll('a');
+        console.log(lstA);
+        for (var i = 0; i < lstA.length; i++) {
+            lstA[i].onclick = function (e) {
+                console.log(e.target.href);
+                e.preventDefault();
+            }
+        }
+    </script>
+</body>
+
+</html>

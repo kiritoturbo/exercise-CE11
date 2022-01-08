@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Thực hành 19. Tạo một ô input chỉ cho phép nhập chữ thường (Không cho phép nhập chữ in
+hoa) Sử dụng sự kiện preventDefault() để thực hiện.
+ Trường hợp nhập phím ngoài khoảng cho phép thì hiển thị thông báo nhập chưa chính xác, sau 2
+giây thông báo tự động mất đi
+ Gợi ý
+ - Sử dụng sự kiện keypress để bắt hành động ấn phím
+ - Kiểm tra xem nút được ấn xuống có mã e.charCode nằm trong khoảng [97; 122] -->
+    <input type="text" name="" id="inputtext" onkeypress="showError(event)">
+    <div id="mess"></div>
+    <script>
+        var ip = document.getElementById('inputtext');
+        var mess = document.getElementById('mess');
+
+        // ip.addEventListener('keypress', function (e) {
+        //     // if (e.charCode < 97 || e.charCode > 122) {
+        //     //     showError();
+        //     //     console.log(e.charCode);
+        //     //     e.preventDefault();
+        //     //     mess.innerText = 'không hợp lệ ,phải nhập lại chữ thường';
+        //     // } else {
+        //     //     mess.innerText = '';
+        //     // }
+        // });
+
+        function showError(event) {
+            console.log(event)
+        }
+    </script>
+</body>
+
+</html>

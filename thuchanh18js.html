@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 2px solid green;
+            padding: 16px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1" onclick="show1();">
+        div 1
+        <div class="div2" onclick="show2();">div 2</div>
+    </div>
+    <input type="checkbox" id="chkInfo">chỉ cho phép hiện 1 thông báo
+    <script>
+        function show1() {
+            alert('div1');
+        }
+
+        function show2() {
+            alert('div2');
+            var check = document.getElementById('chkInfo');
+            console.log(check.checked);
+            if (check.ckecked == true) {
+                event.stopPropagation();
+            }
+        }
+    </script>
+</body>
+
+</html>
