@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [1, 2, 3, 4];
+        const new_arr = arr.map(function (currentElement, index) {
+            console.log("index:", index, "-element:", currentElement);
+            return currentElement * 2;
+
+        })
+        const new2 = arr.map((e, index) => {
+            return e * 3;
+        })
+        console.log(new_arr);
+        console.log(new2);
+    </script>
+</body>
+
+</html>

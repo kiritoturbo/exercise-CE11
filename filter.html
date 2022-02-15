@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            name: 'truong',
+            age: 20
+        }
+        var obj_handsome = {
+            handsome: 'max level'
+        }
+        var objSummary = {
+            ...obj,
+            ...obj_handsome,
+            handsome: 'super'
+        }
+        let fillters = {}
+        const fillters = {
+            max: 1000,
+            min: 0
+        }
+        const fillterColor = {
+            color: 'red'
+        }
+        const filterSize = {
+            size: 's'
+
+        }
+        fillters = {
+            ...filterPrice,
+            ...fillterColor,
+            ...filterSize,
+            size: 'L',
+            max: 500
+        }
+        console.log(fillters);
+    </script>
+</body>
+
+</html>

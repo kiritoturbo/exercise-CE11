@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let iphone = {
+            model: "iphone x",
+            price: '$1500 usd',
+            year: 2017
+        };
+        let {
+            model,
+            price,
+            year
+        } = iphone;
+        console.log(model);
+
+        // let iphone = {
+        //     model: 'iphone x',
+        //     price: '$1500 usd',
+        //     year: 2017
+        // };
+        // let {
+        //     model: iphoneModel,
+        //     price: iphonePrice,
+        //     year: iphoneYear
+        // } = iphone;
+        // console.log(iphoneModel);
+        // console.log(iphonePrice);
+        // console.log(iphoneYear);
+
+
+        var a = 1;
+        var b = 2;
+        var c = a;
+        a = b;
+        b = c;
+
+        console.log(`a:${a},b:${b}`);
+    </script>
+    <script>
+        let num = [1, 2, 3, 4];
+        export default function Test() {
+            console.log("say hi");
+        }
+        class Greeting {
+            constructor(name) {
+                this.greeting = 'hello', name;
+            }
+        }
+        export {
+            num,
+            Greeting
+        }
+    </script>
+
+    <script type="module">
+        import Test,{num,Greeting} from ''
+    </script>
+</body>
+
+</html>
