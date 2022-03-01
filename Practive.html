@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul {
+        list-style-type: none;
+        background-color: green;
+        overflow: hidden;
+    }
+
+    ul li {
+        float: left;
+    }
+
+    ul li a {
+        text-decoration: none;
+        padding: 8px 8px;
+        display: block;
+        color: #fff;
+    }
+
+    .active {
+        /* background-color: rgb(9, 70, 9); */
+
+        border-bottom: 3px solid rgb(9, 70, 9);
+    }
+</style>
+
+<body>
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#" class="active">Trang chủ</a>
+            </li>
+            <li>
+                <a href="#">Tin tức</a>
+            </li>
+            <li>
+                <a href="#">Thời sự </a>
+            </li>
+
+        </ul>
+    </div>
+    <script>
+        var lstAnchors = document.querySelectorAll('a'); //lấy thẻ a 
+        lstAnchors.forEach(anchor => { //gán sự kiện cho thẻ a 
+            // anchor.addEventLister('click', function (e) {
+            //     //remove class active
+            //     for (let i = 0; i < lstAnchors.length; i++) {
+            //         lstAnchors[i].classList.remove('active'); //xóa thẻ có class active
+            //     }
+            //     //add class active
+            //     anchor.classList.add('active');
+            // })
+            anchor.addEventListener('click', function () {
+                for (let i = 0; i < lstAnchors.length; i++) {
+                    lstAnchors[i].classList.remove('active');
+
+                }
+                //add class active
+                anchor.classList.add('active')
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>

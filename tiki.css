@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.auth_form {
+    display: grid;
+    grid-template-columns: 500px auto;
+
+}
+
+ul {
+    list-style-type: none;
+    /* background-color: green; */
+    overflow: hidden;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 8px 8px;
+    display: block;
+    color: #fff;
+}
+
+.active {
+    /* background-color: rgb(9, 70, 9); */
+
+    border-bottom: 3px solid rgb(9, 70, 9);
+}
+
+.nav .user a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: green;
+}
+
+
+/* style cho modal  */
+.modal {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    display: none;
+    animation: fadeIn linear 0.3 s;
+
+}
+
+.modal_overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    position: absolute;
+
+}
+
+.modal_body {
+    margin: auto;
+    position: relative;
+    background-color: #fff;
+    margin-top: 100px;
+    max-width: 800px;
+    border-radius: 20px;
+}
+
+.auth_form--left {
+    margin: 40px 20px 20px 40px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.auth_formLeft--input {
+    margin-top: 20px;
+}
+
+.auth_formLeft--header {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.input_phone {
+    padding: 8px;
+    padding-left: 0px;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: solid 1px gray;
+    outline: none;
+    width: 100%;
+}
+
+.btn_submit {
+    width: 100%;
+    background-color: rgb(233, 73, 73);
+    padding: 8px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.btn_submit:hover {
+    background-color: rgb(204, 32, 32);
+}
+
+.auth_formLeft--submit {
+    margin-top: 20px;
+}
+
+
+.auth_formLeft--email {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.emailLogin {
+    text-decoration: none;
+}
+
+
+.social_heading {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.social_items {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.social_item {
+    margin: 10px 10px;
+
+}
+
+.social_items img {
+    height: 50px;
+}
+
+.social_login {
+    text-align: center;
+}
+
+
+/* form right  */
+.auth_form--right {
+    background: linear-gradient(136deg, rgb(240, 248, 255) -1%, rgb(219, 238, 255) 85%);
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.logo_image {
+    width: 250px;
+}
+
+.auth_form--header {
+    line-height: 2;
+    font-size: 17px;
+    color: rgb(11, 116, 229);
+    font-weight: 600;
+}
+
+.auth_form--des {
+    color: rgb(11, 116, 229);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* show modal  */
+.show_modal {
+    display: inline;
+}
+
+.btn_Close {
+    position: absolute;
+    float: right;
+    right: -18px;
+    top: -18px;
+    width: 45px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_Image {
+    width: 45px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* .emailLogin */
+.auth_icon--back {
+    font-size: 40px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.auth_email {
+    padding: 20px 30px 20px 40px;
+    line-height: 1.6;
+
+}
+
+.auth_icon {
+    padding-bottom: 15px;
+}
+
+.auth_formLeft--header {
+    font-size: 2em;
+}
+
+.auth_formLeft--title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.auth_email--input {
+    margin-bottom: 8px;
+}
+
+.input_email {
+    padding: 8px 8px 8px 0px;
+    width: 100%;
+    border: none;
+    border-bottom: solid 2px #ddd;
+    outline: none;
+    font-size: 16px;
+}
+
+.input_pass {
+    padding: 8px 8px 8px 0px;
+    width: 100%;
+    border: none;
+    border-bottom: solid 2px #ddd;
+    outline: none;
+    font-size: 16px;
+    /* position: absolute; */
+}
+
+.auth_password--input {
+    position: relative;
+}
+
+.auth_password--input span {
+    position: relative;
+    right: 0px;
+    float: right;
+    top: -30px;
+    cursor: pointer;
+}
+
+.auth_formLeft--submit {
+    margin-bottom: 8px;
+}
+
+.password_item {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.auth_accout .create_account {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
+.show_phone {
+    display: inline;
+}
+
+.hide_phone {
+    display: none;
+}
+
+.show_email {
+    display: inline;
+}
+
+.hide_email {
+    display: none;
+}

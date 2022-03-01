@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab {
+            overflow: hidden;
+        }
+
+        .tab_item {
+            float: left;
+            padding: 8px;
+            background-color: rgb(8, 150, 20);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .tab_item.active {
+            background-color: green;
+            border-bottom: 4px solid blue;
+        }
+
+        .tab_panel {
+            display: none;
+        }
+
+        .tab_panel.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab_item active">
+            Tổng quan
+        </div>
+        <div class="tab_item">
+            Giới thiệu
+        </div>
+        <div class="tab_item">
+            Nội dung
+        </div>
+    </div>
+
+    <div class="tabContent">
+        <div class="tab_panel active">PHần tổng quan </div>
+        <div class="tab_panel ">PHần giới thiệu </div>
+        <div class="tab_panel ">PHần nội dung </div>
+    </div>
+
+    <script>
+        var items = document.querySelectorAll('.tab_item');
+        var panels = document.querySelectorAll('.tab_panel');
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].addEventListener('click', function (e) {
+                var tabActive = document.querySelector('.tab_item.active');
+                // tabActive.classList.remove('active');
+                tabActive.classList.remove('active');
+
+                var panelActive = document.querySelector('.tab_panel.active');
+                panelActive.classList.remove('active');
+
+                //add
+                items[i].classList.add('active');
+                panels[i].classList.add('active');
+            })
+
+
+        }
+
+
+        // anchor.addEventLister('click', function (e) {
+        //     //remove class active
+        //     for (let i = 0; i < lstAnchors.length; i++) {
+        //         lstAnchors[i].classList.remove('active'); //xóa thẻ có class active
+        //     }
+        //     //add class active
+        //     anchor.classList.add('active');
+        // })
+    </script>
+</body>
+
+</html>

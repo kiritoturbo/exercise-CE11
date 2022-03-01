@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="tiki.css">
+
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="menu">
+            <li><a href="#" id="home" onclick="AddActive(this)" class="active">Trang chủ</a></li>
+            <li><a href="#" id="new" onclick="AddActive(this)">Tin tức</a></li>
+            <li><a href="#" id="thoisu" onclick="AddActive(this)">Thời sự </a></li>
+        </ul>
+        <div class="user"><a href="#" class="menu_login" onclick="showModal()">Đăng nhập </a></div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal_overlay"></div>
+        <div class="modal_body">
+
+            <button class="btn_Close" onclick="closeModal()">
+                <img class="btn_Image"
+                    src="https://salt.tikicdn.com/ts/upload/fe/20/d7/6d7764292a847adcffa7251141eb4730.png"
+                    alt="closeImage">
+            </button>
+
+            <div class="auth_form">
+                <div class="auth_form--left" id="loginByPhone">
+                    <div class="auth_formLeft--header">
+                        xin chào,
+                    </div>
+                    <div class="auth_formLeft--title">
+                        đăng nhập và tạo tài khoản
+                    </div>
+                    <div class="auth_formLeft--input">
+                        <input type="text" class="input_phone" placeholder="Nhập số điện thoại ">
+                    </div>
+                    <div class="auth_formLeft--submit">
+                        <button class="btn_submit">Tiếp tục </button>
+                    </div>
+                    <div class="auth_formLeft--email">
+                        <a href="#" class="emailLogin " onclick="ShowEmail()">Đăng nhập bằng Email</a>
+                    </div>
+
+                    <div class="social_login">
+                        <p class="social_heading">
+                            Hoặc tiếp tục bằng
+                        </p>
+                        <ul class="social_items">
+                            <li class="social_item">
+                                <img src="https://salt.tikicdn.com/ts/upload/3a/22/45/0f04dc6e4ed55fa62dcb305fd337db6c.png"
+                                    alt="">
+                            </li>
+                            <li class="social_item">
+                                <img src="https://salt.tikicdn.com/ts/upload/1c/ac/e8/141c68302262747f5988df2aae7eb161.png"
+                                    alt="">
+                            </li>
+                            <li class="social_item">
+                                <img src="https://salt.tikicdn.com/ts/upload/98/37/86/517cfc05f04466b3118357a1fb4182c8.png"
+                                    alt="">
+                            </li>
+                        </ul>
+
+                        <div class="social_rule">
+                            <span>Bạn đã chấp nhận điều khoản sử dụng </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- đăng nhập bằng gmail -->
+                <div class="auth_email hide_email" id="auth_email">
+                    <div class="auth_icon">
+                        <i class="fa-solid fa-angle-left auth_icon--back" onclick="ShowPhone()"></i>
+                    </div>
+                    <div class="auth_formLeft--header">
+                        đăng nhập bằng email
+                    </div>
+                    <div class="auth_formLeft--title">
+                        Nhập email và tài khoản
+                    </div>
+                    <div class="auth_email--input">
+                        <input type="text" class="input_email" placeholder="abc@gamil.com">
+
+                    </div>
+                    <div class="auth_password--input">
+                        <input type="text" class="input_pass" placeholder="Mật khẩu ">
+                        <span>Hiện</span>
+                    </div>
+                    <div class="auth_formLeft--submit">
+                        <button class="btn_submit">Đăng nhập </button>
+                    </div>
+                    <div class="forgot_password">
+                        <a href="#" class="password_item">Quên mật khẩu </a>
+                    </div>
+                    <div class="auth_accout">
+                        <span>chưa có tài khoản?</span>
+                        <a href="#" class="create_account">tạo tài khoản </a>
+                    </div>
+
+                </div>
+                <!-- left form :hiển thi anh -->
+                <div class="auth_form--right">
+                    <div class="auth_form--logo">
+                        <img src="https://salt.tikicdn.com/ts/upload/eb/f3/a3/25b2ccba8f33a5157f161b6a50f64a60.png"
+                            alt="logo" class="logo_image">
+
+                    </div>
+                    <div class="auth_form--title">
+                        <p class="auth_form--header">Mua sắm tại tiki</p>
+                        <p class="auth_form--des">Siêu ưu đãi mỗi ngày </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById('myModal');
+        var Phone = document.getElementById("loginByPhone");
+        var Email = document.getElementById("auth_email");
+
+        function showModal() {
+            modal.classList.add("show_modal");
+        }
+
+        function closeModal() {
+            modal.classList.remove("show_modal");
+        }
+
+        function ShowPhone() {
+
+            Phone.classList.remove("hide_phone")
+            Phone.classList.add("show_phone");
+            Email.classList.remove("show_email");
+            Email.classList.add("hide_email");
+
+        }
+
+        function ShowEmail() {
+            Phone.classList.remove("show_phone");
+            Phone.classList.add("hide_phone")
+            Email.classList.remove("hide_email");
+            Email.classList.add("show_email");
+
+        }
+    </script>
+
+</body>
+
+</html>
