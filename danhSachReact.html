@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        var ul = document.createElement('ul');
+        var li = document.createElement("li");
+        li.innerHTML = "hà nội";
+
+        var li2 = document.createElement('li');
+        li2.innerHTML = "Sài Gòn ";
+        ul.appendChild(li);
+        ul.appendChild(li2);
+
+        document.getElementById('root').appendChild(ul);
+
+
+        // //React Element
+        // var ulEl = React.createElement(
+        //     'ul',
+        //     null,
+        //     React.createElement('li', {
+        //         className: 'menu-item'
+        //     }, 'Hà Nội '),
+        //     React.createElement('li', {
+        //         className: 'menu-item'
+        //     }, 'Sài Gòn '),
+        // )
+        // ReactDOM.render(ulEl, document.getElementById('root'));
+
+        var ll = React.createElement(
+            'ul',
+            null,
+            React.createElement(
+                'li',
+                null,
+                React.createElement(
+                    'a', {
+                        href: "https://dantri.com.vn/"
+                    }, "dantri"
+                )
+            )
+        )
+        ReactDOM.render(ll, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

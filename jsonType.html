@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Javascript Type > chuỗi þsoN
+        var jt = '["CEGroup", "Duc Anh"]';
+        console.log(typeof (jt) + ": " + jt);
+        var jsonType = JSON.parse(jt);
+        console.log(typeof (jsonType));
+        console.log(jsonType);
+        // 1 / JSON - > Javascript Type
+        var obj = {
+            "id": "1",
+            "name": "CEGroup",
+            "address": "41 Phố Văn Quản, Hà Nội"
+        }
+        console.log(JSON.stringify(obj));
+    </script>
+
+</body>
+
+</html>
